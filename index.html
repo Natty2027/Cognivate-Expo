@@ -191,10 +191,10 @@
 <body>
   <nav>
     <div class="container">
-      <div class="logo">Cognivate</div>
+      <div class="logo">Nathan Johnson</div>
       <div>
-        <a href="#what">What</a>
-        <a href="#stack">Stack</a>
+        <a href="#featured">Featured</a>
+        <a href="#work">Work</a>
         <a href="#engineering">Engineering</a>
         <a href="https://github.com/Natty2027">GitHub</a>
       </div>
@@ -203,9 +203,9 @@
 
   <header class="hero">
     <div class="container">
-      <div class="badge">In beta · Coming soon to the App Store</div>
-      <h1>Turn any document into <span class="accent">chapters, vocab, and quizzes.</span></h1>
-      <p class="subtitle">Cognivate is a mobile study app that ingests PDFs, photos of notes, and pasted text — and uses Claude to generate personalized study modules.</p>
+      <div class="badge">Software engineer · Building shipped products</div>
+      <h1>I build <span class="accent">full-stack products,</span> from auth to monetization.</h1>
+      <p class="subtitle">Selected work below — mobile apps, AI-powered platforms, security tooling, and full-stack web. Most recent: Cognivate, an AI study app shipping to TestFlight.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="mailto:johbson19962@gmail.com">Get in touch</a>
         <a class="btn btn-secondary" href="https://github.com/Natty2027">View on GitHub</a>
@@ -213,10 +213,11 @@
     </div>
   </header>
 
-  <section id="what">
+  <section id="featured">
     <div class="container">
-      <h2>What it does</h2>
-      <div class="grid-3">
+      <h2>Featured · Cognivate</h2>
+      <p><strong>AI study app shipping to the App Store.</strong> Mobile app that ingests PDFs, photos of notes, and pasted text — then uses Claude to generate personalized chapters, vocab cards, and quiz questions. Currently in App Review.</p>
+      <div class="grid-3" style="margin-top: 24px;">
         <div class="card">
           <h3>Upload</h3>
           <p>PDFs, photos of notes, and pasted text. Multi-document study sets.</p>
@@ -230,13 +231,6 @@
           <p>Spaced-repetition flashcards, adaptive quizzes, audio tutor mode, daily streaks.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="stack">
-    <div class="container">
-      <h2>Built with</h2>
-      <p>End-to-end mobile product. iOS-first, Android-ready. Subscription monetization via RevenueCat. Authentication via Clerk with Google and Apple sign-in.</p>
       <div class="tech-list">
         <span class="tech">React Native</span>
         <span class="tech">Expo</span>
@@ -252,9 +246,83 @@
     </div>
   </section>
 
+  <section id="work">
+    <div class="container">
+      <h2>Selected work</h2>
+
+      <div class="case-study">
+        <span class="label">AI · Career platform</span>
+        <h3>Tech Role Accelerator</h3>
+        <p>Premium AI-powered career simulator and learning platform. Generates dynamic learning paths per role, simulates day-to-day job duties, runs mock interviews with real-time audio evaluation, and provides line-by-line resume tailoring. Live demo deployed.</p>
+        <p>Full SaaS infrastructure: Stripe Checkout + Customer Portal + signed webhooks, Pro entitlement gating on premium AI endpoints, Clerk auth, Neon Postgres, IP-rate-limited public demo.</p>
+        <div class="tech-list">
+          <span class="tech">React 19</span>
+          <span class="tech">Vite</span>
+          <span class="tech">Tailwind v4</span>
+          <span class="tech">Google Gemini 1.5</span>
+          <span class="tech">Clerk</span>
+          <span class="tech">Neon Postgres</span>
+          <span class="tech">Stripe</span>
+          <span class="tech">Vercel</span>
+        </div>
+      </div>
+
+      <div class="case-study">
+        <span class="label">Security · AI tooling</span>
+        <h3>C-P Unified Audit</h3>
+        <p>Institutional-grade security auditing platform with AI threat simulation. Scores organizations across Physical Access, Network, Personnel, Data Privacy, and Compliance domains. Pairs traditional audits with a Gemini-powered threat simulator that models attack vectors and recommends mitigations.</p>
+        <p>Federated intelligence search uses Google Search grounding to surface real-time CVE and NIST data. Custom radar-chart visualizations, longitudinal trend tracking, and an automated Vitest + Supertest suite for the protected security routes.</p>
+        <div class="tech-list">
+          <span class="tech">React 18</span>
+          <span class="tech">Node.js</span>
+          <span class="tech">Express</span>
+          <span class="tech">SQLite</span>
+          <span class="tech">Google Gemini</span>
+          <span class="tech">OAuth 2.0</span>
+          <span class="tech">JWT</span>
+          <span class="tech">Recharts</span>
+          <span class="tech">Vitest</span>
+        </div>
+      </div>
+
+      <div class="case-study">
+        <span class="label">Fintech · Bank data</span>
+        <h3>Money Firewall</h3>
+        <p>Subscription-detection web app that connects to a user's bank via Plaid and surfaces recurring outflows from real transaction data. Detection groups outflows by normalized merchant, classifies cadence (weekly / monthly / annual) by median interval, auto-marks cancelled subs when an expected cycle has elapsed, and recommends renegotiate / review / keep actions.</p>
+        <p>Built as a pnpm monorepo. API contract lives in an OpenAPI spec; Orval codegens React Query hooks and Zod schemas from it so the client and server can never drift. Server has a simulator mode that seeds a 9-merchant transaction history when Plaid credentials are absent — useful for review demos.</p>
+        <div class="tech-list">
+          <span class="tech">TypeScript</span>
+          <span class="tech">Node.js</span>
+          <span class="tech">Express 5</span>
+          <span class="tech">PostgreSQL</span>
+          <span class="tech">Drizzle ORM</span>
+          <span class="tech">Zod</span>
+          <span class="tech">Orval</span>
+          <span class="tech">Plaid</span>
+          <span class="tech">pnpm workspaces</span>
+        </div>
+      </div>
+
+      <div class="case-study">
+        <span class="label">Full-stack web · Team project</span>
+        <h3>TutorLink</h3>
+        <p>SFSU CSC648 team project: a peer-tutor marketplace where students post requests and tutors post their availability. Designed and shipped end-to-end over a semester with a five-person team.</p>
+        <p>Backend-for-Frontend architecture: Next.js front end with API routes that proxy a separate Express server, so the client never talks directly to the DB. Knex handles migrations and seed data; routes cover courses, tutor posts, requests, and tutor applications.</p>
+        <div class="tech-list">
+          <span class="tech">Next.js</span>
+          <span class="tech">Express</span>
+          <span class="tech">Knex</span>
+          <span class="tech">SQL</span>
+          <span class="tech">BFF pattern</span>
+          <span class="tech">Team of 5</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="engineering">
     <div class="container">
-      <h2>Engineering highlights</h2>
+      <h2>Engineering highlights · Cognivate deep-dive</h2>
 
       <div class="case-study">
         <span class="label">Generation pipeline</span>
