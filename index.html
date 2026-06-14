@@ -187,6 +187,16 @@
     }
     .case-links a:hover { color: #8a8af5; text-decoration: underline; }
 
+    .about p {
+      font-size: 17px;
+      color: var(--text);
+      max-width: 680px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+    .about p strong { color: var(--accent); font-weight: 600; }
+    .about p.muted { color: var(--text-dim); font-size: 16px; }
+
     footer {
       padding: 48px 0;
       border-top: 1px solid var(--border);
@@ -207,6 +217,7 @@
     <div class="container">
       <div class="logo">Nathan Johnson</div>
       <div>
+        <a href="#about">About</a>
         <a href="#featured">Featured</a>
         <a href="#work">Work</a>
         <a href="#engineering">Engineering</a>
@@ -226,6 +237,15 @@
       </div>
     </div>
   </header>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>Hi — I'm Nathan. I spent twelve years in the Navy running operations and security programs: managing classified material across three continents, leading teams of thirty-plus, and picking up CompTIA Security+ along the way. A couple of years ago I started building software, and it stuck.</p>
+      <p>Now I ship full-stack products — <strong>Cognivate</strong>, an AI study app currently in App Review; a Plaid-powered subscription detector that catches the gym memberships you forgot about; an AI career-prep platform with full Stripe billing and Gemini-driven mock interviews. Usually solo, sometimes with a team.</p>
+      <p class="muted">Finishing my BS at San Francisco State this December. Looking for engineering roles where the work ends up in front of real people. Based in Walnut Creek, CA — reach me at <a href="mailto:johbson19962@gmail.com" style="color: var(--accent); text-decoration: none;">johbson19962@gmail.com</a>.</p>
+    </div>
+  </section>
 
   <section id="featured">
     <div class="container">
